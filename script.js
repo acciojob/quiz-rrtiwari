@@ -5,7 +5,6 @@ let score = 0;
 let cardContainer = document.getElementById("card-container");
 let scoreDisplay = document.getElementById("score");
 
-
 async function dataload() {
   try {
     let data = await fetch("./data.json");
@@ -26,6 +25,7 @@ function loadQuestion() {
 
   let h2 = document.createElement("h2");
   h2.innerHTML = obj.question;
+  h2.id = "question"; // <-- THIS IS THE FIX
   cardContainer.appendChild(h2);
 
   let ul = document.createElement("ul");
@@ -59,7 +59,6 @@ function loadQuestion() {
   submitBtn.addEventListener("click", () => handleSubmit(obj, ul, submitBtn));
   cardContainer.appendChild(submitBtn);
 }
-
 
 function handleSubmit(obj, ul, submitBtn) {
   const selectedOption = ul.querySelector("li.selected");
