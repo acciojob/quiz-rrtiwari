@@ -37,7 +37,7 @@ function loadQuestion() {
       let li = document.createElement("li");
       li.innerHTML = `<strong>${key.toUpperCase()})</strong> ${obj[key]}`;
       li.dataset.key = key;
-      li.id = key; 
+      li.id = `${key}_text`; 
 
       li.addEventListener("click", () => {
         if (ul.classList.contains("answered")) return;
@@ -55,7 +55,7 @@ function loadQuestion() {
   cardContainer.appendChild(ul);
 
   let submitBtn = document.createElement("button");
-  submitBtn.id = "submit"; // <-- FIX 2: Change ID to "submit"
+  submitBtn.id = "submit";
   submitBtn.innerHTML = "Submit";
   submitBtn.addEventListener("click", () => handleSubmit(obj, ul, submitBtn));
   cardContainer.appendChild(submitBtn);
