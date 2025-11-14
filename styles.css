@@ -1,1 +1,126 @@
-/*  your css code here. If applicable */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#quiz-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+#score-header {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  text-align: right;
+}
+
+#card-container {
+  padding: 24px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.options {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+.options li {
+  font-size: 1rem;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.options li:hover {
+  background-color: #f9f9f9;
+  border-color: #007bff;
+}
+
+.options li.selected {
+  background-color: #e6f7ff;
+  border-color: #007bff;
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.options.answered li:hover {
+  background-color: inherit;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+.options.answered li.selected {
+  background-color: #e6f7ff;
+  border-color: #007bff;
+}
+
+.options li.correct {
+  background-color: #e0f7e0;
+  border-color: #5cb85c;
+  color: #1e4620;
+  font-weight: 600;
+}
+
+.options li.incorrect {
+  background-color: #fdeaea;
+  border-color: #d9534f;
+  color: #a94442;
+  font-weight: 600;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#submit-btn:hover {
+  background-color: #0056b3;
+}
+
+#card-container h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#card-container p {
+  text-align: center;
+  font-size: 1.1rem;
+}
