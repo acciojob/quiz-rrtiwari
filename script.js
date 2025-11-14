@@ -25,7 +25,7 @@ function loadQuestion() {
 
   let h2 = document.createElement("h2");
   h2.innerHTML = obj.question;
-  h2.id = "question"; // <-- THIS IS THE FIX
+  h2.id = "question";
   cardContainer.appendChild(h2);
 
   let ul = document.createElement("ul");
@@ -37,6 +37,7 @@ function loadQuestion() {
       let li = document.createElement("li");
       li.innerHTML = `<strong>${key.toUpperCase()})</strong> ${obj[key]}`;
       li.dataset.key = key;
+      li.id = key; 
 
       li.addEventListener("click", () => {
         if (ul.classList.contains("answered")) return;
@@ -54,7 +55,7 @@ function loadQuestion() {
   cardContainer.appendChild(ul);
 
   let submitBtn = document.createElement("button");
-  submitBtn.id = "submit-btn";
+  submitBtn.id = "submit"; // <-- FIX 2: Change ID to "submit"
   submitBtn.innerHTML = "Submit";
   submitBtn.addEventListener("click", () => handleSubmit(obj, ul, submitBtn));
   cardContainer.appendChild(submitBtn);
@@ -103,7 +104,7 @@ function showFinalScreen() {
   cardContainer.innerHTML = `
         <h3>Quiz Complete!</h3>
         <p>You scored ${score} out of ${allQuestions.length}.</p>
-        <button id="submit-btn" onclick="restartQuiz()">Restart Quiz</button>
+        <button id="restart-btn" onclick="restartQuiz()">Restart Quiz</button> 
     `;
 }
 

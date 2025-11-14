@@ -98,7 +98,8 @@ h2 {
   font-weight: 600;
 }
 
-#submit-btn {
+#submit,
+#restart-btn {
   width: 100%;
   padding: 14px;
   font-size: 1rem;
@@ -111,7 +112,8 @@ h2 {
   transition: background-color 0.2s;
 }
 
-#submit-btn:hover {
+#submit:hover,
+#restart-btn:hover {
   background-color: #0056b3;
 }
 
